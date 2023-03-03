@@ -77,29 +77,61 @@ jQuery(document).ready(function(){
 
 
 
-
     function hoverRegionEfect(){
 
-        let lastItem = "";
+        let lastRegion = ".poland path.slask";
+        let lastItem = ".poland .region-wrapper .slask";
+        let regions = {
+            pomorskie: 'Pomorskie',
+            slaskie: 'Śląskie',
+            warminskomazurskie: 'Warmińsko-mazurskie',
+            opolskie: 'Opolskie',
+            podkarpackie: 'Podkarpackie',
+            lubelskie: 'Lubelskie',
+            podlaskie: 'Podlaskie',
+            mazowieckie: 'Mazowieckie',
+            lodzkie: 'Łódzkie',
+            zachodniopomorskie: 'Zachodnio-pomorskie',
+            kujawskopomorskie: 'Kujawsko-pomorskie',
+            malopolskie: 'Małopolsie',
+            wielkopolskie: 'Wielkopolskie',
+            dolnoslaskie: 'Dolnośląskie',
+            lubuskie: 'Lubuskie',
+            swietokrzyskie: "Świętokrzyskie"
 
+
+
+        };
 
         $(".poland path").each(function(i) {
 
-
-
             $(this).on('mouseover', function (){
 
-                $(lastItem).css({fill: "#a6d71e"});
-                $('div.hover').css({display: "flex"});
+                $(lastRegion).css({fill: "#a6d71e"});
+                $(lastItem).css({display: "none"});
 
-                lastItem = this;
+                let dataRegion = $(this).data("region")
+                let region = 'div.' + dataRegion;
+
+                console.log(dataRegion)
+
+                if(!$(region).length){
+
+                    let regionTitle = regions[dataRegion];
+                    console.log(regionTitle)
+                    $('.region.empty .region-title').text(regionTitle)
+                    region = '.region.empty'
+
+                }
+
+                $(region).css({display: "flex"});
+
+
+                lastRegion = this;
+                lastItem = region;
                 $(this).css({fill: "#55B047"});
 
-                $(this).on('mouseleave', function (lastItem){
-                    $('div.hover').css({display: "none"});
-                    $(lastItem).css({fill: "#a6d71e"});
 
-                })
             })
 
 
@@ -107,7 +139,7 @@ jQuery(document).ready(function(){
         }
         )};
 
-    hoverRegionEfect()
+    hoverRegionEfect( )
 
 
 

@@ -9,6 +9,7 @@
     width: 10px;
 }
 .city a{
+    cursor: pointer;
     color: black !important;
 }
 a:hover{
@@ -150,3 +151,19 @@ svg{
     position: absolute;
 }
 
+.region-wrapper{
+    width: 50%;
+}
+
+.region{
+    cursor: pointer;
+    position: absolute;
+    justify-content: center;
+    flex-wrap: wrap;
+    display: flex;
+    padding: 50px;
+}
+
+.region-desc{
+    flex-basis: 100%;
+}
