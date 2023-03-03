@@ -1,0 +1,152 @@
+.city{
+    /*position: relative;*/
+    position: absolute;
+    width: 20px;
+    height: 20px;
+}
+.pin-position{
+    position: relative;
+    width: 10px;
+}
+.city a{
+    color: black !important;
+}
+a:hover{
+    color: #587700 !important;
+}
+
+.dot img{
+    height: 15px !important;
+}
+.dot{
+    display: flex;
+    justify-content: center;
+}
+.map-title{
+    top: 22px;
+    font-size: 16px;
+    font-family: Teko;
+    position: absolute;
+}
+.pins-wraper{
+    position: absolute;
+}
+
+.poland svg{
+    width: 500px;
+    height: 500px;
+}
+
+@media all and (max-width: 510px){
+    .pins-wraper{
+        width: 350px;
+        height: 350px;
+
+    }
+
+    .pins{
+
+        width: 100% !important;
+        height: 100% !important;
+
+    }
+
+    .poland svg{
+        width: 350px;
+        height: 350px;
+    }
+
+}
+.pins{
+    z-index: 1;
+    position: relative;
+    width: 500px;
+    height: 500px;
+
+}
+.text{
+    margin: 0px 25px
+}
+.poland{
+    display: flex;
+    z-index: 0;
+    justify-content: center;
+    align-content: center;
+
+    height: 500px;
+    width: 500px;
+    width: auto;
+}
+svg{
+    position: relative;
+}
+
+
+.content{
+    z-index: 10;
+    box-shadow: 0 0 40px 3px rgb(0 0 0 / 12%);
+    border-radius: 15px;
+    width: 500px;
+    position: relative;
+    top: -170px;
+    left: 20px;
+    background-color: white;
+    padding: 15px;
+    display: none;
+
+
+}
+
+.mobile-content{
+    z-index: 10;
+    box-shadow: 0 0 40px 3px rgb(0 0 0 / 12%);
+    border-radius: 15px;
+    width: 100%;
+    position: absolute;
+    /*top: 150px;*/
+    left: 0px;
+    background-color: white;
+    padding: 15px;
+    display: none;
+
+}
+
+.mobile-content .content-wraper{
+    /*justify-content: center;*/
+    display: flex !important;
+    padding: 30px;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.mobile-content .content-wraper img, .mobile-content .content-wraper .text,.mobile-content .content-wraper .mobile-content-close{
+    flex-basis: 100%;
+}
+
+.pins img{
+    object-fit: contain;
+}
+.mobile-content-close{
+    text-align: end;
+}
+
+.content-wraper{
+
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.bigDot{
+    /*transform: scale(1.3) !important;*/
+}
+
+
+.pins h2{
+    font-size: 25px;
+}
+
+
+.pins-wraper{
+    position: absolute;
+}
+
